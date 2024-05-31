@@ -1,0 +1,25 @@
+lis = [4, 6, 35, 45, 112, 635, 675]
+val = 35
+
+# complexity O(log(n))
+def binary_search(lis, val): 
+    n = len(lis)
+    l,r = 0, n-1
+    while l<=r: #l<=r is an important condition since if the final array is of 1 element, the control comes out of the loop(in case of l<r)
+        mid = (l+r)//2
+        
+        if lis[mid]== val:
+            return mid
+        elif lis[mid] > val:
+            r = mid-1
+        else:
+            l = mid+1
+        print(lis[l],lis[r], lis[mid])
+
+    return -1
+
+
+r = binary_search(lis,val)
+print(r)
+
+print(binary_search(lis,36))
