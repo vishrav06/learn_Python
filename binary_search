@@ -8,7 +8,7 @@ def binary_search(lis, val):
     while l<=r: #l<=r is an important condition since if the final array is of 1 element, the control comes out of the loop(in case of l<r)
         mid = (l+r)//2
         
-        if lis[mid]== val:
+        if lis[mid] == val:
             return mid
         elif lis[mid] > val:
             r = mid-1
